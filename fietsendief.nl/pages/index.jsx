@@ -9,7 +9,7 @@ export default function Home() {
         {/* Hero-sectie */}
         <section className="h-screen w-full flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-900 to-black px-4">
           <h1 className="text-6xl font-extrabold mb-4 text-white">
-            FIETSENDIEF
+            FIETSENDIEF Dev Branch
           </h1>
           <h2 className="text-2xl font-medium text-gray-400 mb-6">
             Developer
