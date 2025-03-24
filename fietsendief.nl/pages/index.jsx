@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
