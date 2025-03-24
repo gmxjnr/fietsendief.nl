@@ -1,6 +1,21 @@
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
+const projects = [
+  {
+    title: "Legal Products",
+    description: "A Discord Server where you can buy FiveM scripts, Vehicles, and more.",
+    tags: ["Discord Server", "LUA", "Freelancers"],
+    image: "/images/project1.png",
+  },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio website built with React, Next.js, and Tailwind CSS.",
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    image: "/images/project2.png",
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,6 +40,26 @@ export default function Home() {
           </a>
         </section>
 
+        {/* Scroll-indicator */}
+        <div className="flex justify-center mt-8">
+          <a href="#over-mij" className="animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-blue-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+
         {/* Over mij-sectie */}
         <section id="over-mij" className="py-16 bg-gray-800 text-white">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -48,24 +83,41 @@ export default function Home() {
         </section>
 
         {/* Projecten-sectie */}
-        <section id="projecten" className="py-16 bg-gray-900 text-white">
+        <section id="projecten" className="py-16 bg-gray-900 text-white relative">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-8">My Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img src="/images/project1.png" alt="Project 1" className="rounded-lg mb-4" />
-                <h3 className="text-2xl font-bold">Project 1</h3>
-                <p className="text-gray-400 mt-2">
-                  A short description of the project.
-                </p>
-                <a
-                  href="#"
-                  className="text-blue-500 hover:underline mt-4 block"
-                >
-                  View Project
-                </a>
+            <div className="relative">
+          
+              {/* Projectkaarten */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Projectkaart 1 */}
+                <div className="project-card bg-gradient-to-b from-gray-800 to-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-300">
+                  <img src="/images/project1.png" alt="Project 1" className="rounded-lg mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">ProtoGrammers</h3>
+                  <p className="text-gray-400 mb-4">
+                    (Currently in development)
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="tag">Discord Server</span>
+                    <span className="tag">PHP</span>
+                    <span className="tag">Freelancers</span>
+                  </div>
+                </div>
+
+                {/* Projectkaart 2 */}
+                <div className="project-card bg-gradient-to-b from-gray-800 to-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-300">
+                  <img src="/images/project2.png" alt="Project 2" className="rounded-lg mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Portfolio Website</h3>
+                  <p className="text-gray-400 mb-4">
+                    A personal portfolio website built with React, Next.js, and Tailwind CSS to showcase my projects and skills.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="tag">React</span>
+                    <span className="tag">Next.js</span>
+                    <span className="tag">Tailwind CSS</span>
+                  </div>
+                </div>
               </div>
-              {/* Voeg meer projecten toe */}
             </div>
           </div>
         </section>

@@ -169,6 +169,36 @@ img:hover {
   animation: zoom-in 1s ease-in-out;
 }
 
+/* Bewegende stip */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+/* Scroll-indicator animatie */
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 /* Algemene styling voor secties */
 section {
   padding: 4rem 0;
@@ -197,9 +227,30 @@ section a:hover {
 /* Projectkaarten */
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Tags */
+.project-card .tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+/* Glow-lijn */
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #3b82f6, transparent);
+}
+
+.bg-gradient-to-t {
+  background: linear-gradient(to top, #3b82f6, transparent);
 }
