@@ -70,6 +70,33 @@ footer p {
   font-size: 0.875rem;
 }
 
+/* Hero-sectie */
+h1 {
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+/* Knoppen */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Over mij afbeelding */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
 /* Hero-sectie animaties */
 @keyframes fade-in {
   from {
@@ -123,7 +150,7 @@ footer p {
 }
 
 .animate-fade-in {
-  animation: fade-in 1s ease-in-out;
+  animation: fade-in 1.5s ease-in-out;
 }
 
 .animate-slide-in {
@@ -167,6 +194,7 @@ section a:hover {
   opacity: 0.8;
 }
 
+/* Projectkaarten */
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
