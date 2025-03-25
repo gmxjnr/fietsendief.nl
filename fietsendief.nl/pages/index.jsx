@@ -1,8 +1,9 @@
-import { Analytics } from "@vercel/analytics/react"
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import { useState, useEffect } from "react";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Analytics } from "@vercel/analytics/react";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Timeline from "../components/Timeline";
 
 const projects = [
   {
@@ -34,39 +35,6 @@ const skills = [
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [showText, setShowText] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const skillsSection = document.getElementById("skills");
-      if (!skillsSection) return;
-
-      const rect = skillsSection.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Bereken de voortgang op basis van de zichtbaarheid van de sectie
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const progress = Math.max(
-          0,
-          Math.min(100, ((windowHeight - rect.top) / rect.height) * 100)
-        );
-        setScrollProgress(progress);
-      } else {
-        setScrollProgress(0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowText((prev) => !prev); // Wissel tussen tonen en verbergen
-    }, 3000); // Elke 3 seconden wisselen
-    return () => clearInterval(interval); // Opruimen van de interval
-  }, []);
 
   const nextProject = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
@@ -82,32 +50,18 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero-sectie */}
         <section className="h-screen w-full flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-900 to-black px-4">
-          <h1
-            className={`text-6xl font-extrabold mb-4 text-white ${
-              showText ? "animate-fade-in-down" : "animate-fade-out-up"
-            }`}
-          >
+          <h1 className="text-6xl font-extrabold mb-4 text-white animate-fade-in-down">
             FIETSENDIEF
           </h1>
-          <h2
-            className={`text-2xl font-medium text-gray-400 mb-6 ${
-              showText ? "animate-fade-in" : "animate-fade-out"
-            }`}
-          >
+          <h2 className="text-2xl font-medium text-gray-400 mb-6 animate-fade-in">
             Developer
           </h2>
-          <p
-            className={`text-gray-400 text-lg mb-8 ${
-              showText ? "animate-fade-in" : "animate-fade-out"
-            }`}
-          >
+          <p className="text-gray-400 text-lg mb-8 animate-fade-in">
             Building digital experiences with code and creativity
           </p>
           <a
             href="#projecten"
-            className={`px-8 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition duration-300 ${
-              showText ? "animate-fade-in" : "animate-fade-out"
-            }`}
+            className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition duration-300 animate-fade-in"
           >
             View My Work
           </a>
@@ -253,6 +207,8 @@ export default function Home() {
           </div>
         </section>
 
+        <Timeline />
+
         {/* Contact-sectie */}
         <section id="contact" className="py-16 bg-gray-800 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -302,7 +258,6 @@ export default function Home() {
     </div>
   );
 }
-
 <link
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   rel="stylesheet"
