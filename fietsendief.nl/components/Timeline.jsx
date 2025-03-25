@@ -2,15 +2,19 @@ export default function Timeline() {
   const events = [
     {
       year: "2023",
-      description: "Started ProtoGrammers and launched my first major project.",
+      description: "Started ProtoGrammers ( Originally known as FastScripts ). And launched my first major project with Tijn.",
+    },
+    {
+        year: "2024",
+        description: "Started my first Software Development course/school.",
     },
     {
       year: "2025",
       description: "Built Fietsendief.nl and expanded my portfolio.",
     },
     {
-      year: "2026",
-      description: "Collaborated with international clients on innovative projects.",
+      year: "2025/2026",
+      description: "Doing an internship at Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven (SBB).",
     },
   ];
 
