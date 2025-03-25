@@ -13,7 +13,7 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/milan-ramakers-02618422a/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
@@ -21,7 +21,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://twitter.com"
+            href="https://twitter.com/milanbtw"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
