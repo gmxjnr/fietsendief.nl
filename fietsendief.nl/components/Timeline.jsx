@@ -10,7 +10,7 @@ export default function Timeline() {
     },
     {
       year: "2025",
-      description: "Built Fietsendief.nl and expanded my portfolio.",
+      description: "Build Fietsendief.nl and expanded my portfolio.",
     },
     {
       year: "2025/2026",
