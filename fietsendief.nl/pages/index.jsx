@@ -263,7 +263,7 @@ export default function Home() {
             <div className="flex justify-center items-center gap-4">
               {/* Contact Me Button */}
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:contact@milanramakers.nl"
                 className="px-8 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
               >
                 Contact Me
