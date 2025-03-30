@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Timeline from "../components/Timeline";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const projects = [
   {
